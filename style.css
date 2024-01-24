@@ -1,49 +1,61 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-
+  background-color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  align-items: center;
 }
 
-.stopwatch {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px, 24px;
-    border-radius: 10px;
-    
-    
+#timer {
+  font-size: 7rem;
+  font-weight: 700;
+  text-shadow: 2px 2px #f8a5c2;
+  color: #f92672;
+  width: 600px;
+  text-align: center;
+  margin: 40px auto;
 }
 
-.timerDisplay {
-    font-size: 50px;
-    font-weight: 600;
-    padding: 5px 10px;
+#buttons {
+  display: flex;
+  justify-content: center;
 }
 
-.buttons {
-    margin-top: 20px;
-
+button {
+  background-color: #f92672;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.5rem 4rem;
+  margin: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
 }
 
-.btn {
-    font-size: 20px;
-    background-color: none;
-    border: none;
-    border-radius: 8px;
-    color: #ffffff;
-    background-color: var(--clr);
-    padding: 12px 24px;
-    margin-inline: 12px;
-    cursor: pointer;
-    
+button:hover {
+  background-color: #f44583;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+@media (max-width: 800px) {
+  #timer {
+    font-size: 4rem;
+    width: 350px;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
 }
